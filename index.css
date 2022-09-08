@@ -32,8 +32,8 @@ body {
     padding-top: 0px;
     height: 1500px;
     width: auto;
-    margin-left: 13%;
-    margin-right: 13%;
+    margin-left: 18%;
+    margin-right: 18%;
 }
 
 
@@ -69,13 +69,11 @@ body {
 
 #menu {
     position: fixed;
-    height: 300px;
     background-color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 .menu-item {
     font-family: 'Maven Pro';
-    font-size: 30px;
+    font-size: 40px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
