@@ -19,7 +19,11 @@ $(window).scroll(function (event) {
 
     //animate menu when reached last frame
     if (scroll == 250) {
-
+        console.log("animating!!");
+        $("#logo").animate({left: "38%"}, 500);
+        $( ".menu-item" ).each(function( index ) {
+            $(this).delay(150*index).animate({left: "60%"}, 500);
+          });
     }
 
     //change background squares
