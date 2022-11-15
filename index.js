@@ -20,9 +20,9 @@ $(window).scroll(function (event) {
     //animate menu when reached last frame
     if (scroll == 250) {
         console.log("animating!!");
-        $("#logo").animate({left: "38%"}, 500);
+        $("#logoImg").animate({left: "37%"}, 500);
         $( ".menu-item" ).each(function( index ) {
-            $(this).delay(150*index).animate({left: "60%"}, 500);
+            $(this).css("animation", "slideOut 1s forwards " + index*0.2 + "s");
           });
     }
 
@@ -57,4 +57,12 @@ $(document).ready(function () {
         color = 255-Math.floor(Math.random() * 45);
         $(this).css('background-color', 'rgb(' + color + ',' + color + ',' + color + ')');
     });
+
+    $( ".menu-item" ).hover(
+        function() {
+          $( this ).animate({"font-size": "2.7em"}, 500);
+        }, function() {
+          $( this ).animate({"font-size": "2.2em"}, 500);
+        }
+      );
 });
