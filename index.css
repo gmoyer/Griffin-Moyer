@@ -13,6 +13,7 @@
 body {
     background-color: white;
     align-content: center;
+    height: 100%;
 }
 
 
@@ -28,14 +29,13 @@ body {
 }
 
 #container {
-    background-color: #cecece;
-    padding-top: 0px;
-    height: 300em;
+    /*background-color: #cecece;*/
+    padding-top: 4em;
+    /*margin-top: 4em;*/
     width: auto;
-    margin-left: 18%;
-    margin-right: 18%;
+    /*margin-left: 18%;
+    margin-right: 18%;*/
 }
-
 
 
 #logo {
@@ -93,4 +93,14 @@ body {
     margin-bottom: 0.2em;
     left: 40%;
     opacity: 0;
+    cursor: pointer;
+}
+
+
+#menu-box {
+    width: 98%;
+    height: 10em;
+    background-color: #cecece;
+    top: 0px;
+    position: absolute;
 }
