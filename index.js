@@ -20,7 +20,6 @@ $(window).scroll(function (event) {
 
     //animate menu when reached last frame
     if (scroll == 250) {
-        console.log("animating!!");
         $("#logoImg").animate({left: "37%"}, 500);
         $( ".menu-item" ).each(function( index ) {
             $(this).css("animation", "slideOut 1s forwards " + index*0.2 + "s");
@@ -86,3 +85,17 @@ $( window ).resize(function() {
     $('body').css("height", docHeight + "px");
     $('#menu-box').css("top", docHeight + "px");
   });
+
+
+
+//handle menu clicking
+function onSelect(option) {
+    $('#background2').css('z-index', 100);
+    $('.background-square').each(function (index) {
+        setTimeout(() => {
+            $('#background2').append($(this));
+            color = 255-Math.floor(Math.random() * 45);
+            $(this).css('background-color', 'rgb(' + 0 + ',' + color + ',' + color + ')');
+        }, 100*index)
+    });
+}
