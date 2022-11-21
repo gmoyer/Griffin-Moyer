@@ -91,11 +91,17 @@ $( window ).resize(function() {
 //handle menu clicking
 function onSelect(option) {
     $('#background2').css('z-index', 100);
-    $('.background-square').each(function (index) {
+    var index = 0;
+    $('.background-square').each(function () {
         setTimeout(() => {
             $('#background2').append($(this));
             color = 255-Math.floor(Math.random() * 45);
             $(this).css('background-color', 'rgb(' + 0 + ',' + color + ',' + color + ')');
-        }, 100*index)
+        }, 100*index);
+        index++;
     });
+    setTimeout(() => {
+        $('#background2').css('background-color', 'rgb(' + 0 + ',' + 255 + ',' + 255 + ')');
+    }, 100*index);
+    
 }
